@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Currency API</title>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('form').onsubmit = function(){
+          fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician')
+          .then(response => response.json())
+          .then(data => {
+            const name = document.querySelector('#card').value.toUpperCase();
+            const alien = data.data[0].name;
+            const checkName = alien.toUpperCase();
+            console.log(alien);
+            console.log(name);
+            if (checkName == name){
+              document.querySelector('#result').innerHTML = `Correct he is the ${alien}!`;
+            } else{
+              document.querySelector('#result').innerHTML = `No, he is the ${alien}!`;
+            }
+          });
+          return false;
+        };
+
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="card" placeholder="Card Name">
+      <input type="submit" value="Submit">
+      <div id="result">
+
+      </div>
+    </form>
+  </body>
+</html>
