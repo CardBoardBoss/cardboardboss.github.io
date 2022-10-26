@@ -1,0 +1,147 @@
+:root {
+  --g1: rgb(124, 57, 178);
+  --g2: rgb(236, 64, 122);
+  --g3: rgb(40, 75, 184);
+  --g4: rgb(40, 158, 184);
+  --g5: rgb(188, 112, 76);
+  --g6: rgb(194, 146, 112);
+  --g7: rgb(161, 109, 192);
+  --g8: rgb(220, 220, 220);
+  --g9: rgb(200, 76, 160);
+  --g10: rgb(65, 150, 103);
+  --g11: rgb(235, 158, 210);
+  --g12: rgb(132, 186, 149);
+  --g13: rgb(83, 140, 193);
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+body {
+  animation: background-pan 10s linear infinite;
+  background: linear-gradient(
+   to right,
+   var(--g3),
+   var(--g4),
+   var(--g3)
+ );
+  background-size: 200%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px;
+}
+
+#tiles {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows) 1fr);
+}
+
+.tile {
+  position: relative;
+}
+
+.tile:before {
+  background-color: rgb(20, 20, 20);
+  content: "";
+  position: absolute;
+  inset: 0.5px;
+}
+
+.tile:hover:before {
+  background-color: rgb(30, 30, 30);
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: var(--g4);
+  color: white;
+}
+
+.effectList:nth-child(even){
+  background-color: var(--g6);
+
+}
+
+.effectList:nth-child(odd){
+  background-color: var(--g5);
+}
+
+.fusionList:nth-child(even){
+  background-color: var(--g7);
+}
+
+.fusionList:nth-child(odd){
+  background-color: var(--g1);
+}
+
+.linkList:nth-child(even){
+  background-color: var(--g13);
+  color: white;
+}
+
+.linkList:nth-child(odd){
+  background-color: var(--g3);
+  color: white;
+}
+
+.synchroList{
+  background-color: var(--g8);
+}
+
+.xyzList:nth-child(even){
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+
+.xyzList:nth-child(odd){
+  background-color: rgb(30, 30, 30);
+  color: white;
+}
+
+.spellList:nth-child(even){
+  background-color: var(--g12);
+}
+
+.spellList:nth-child(odd){
+  background-color: var(--g10);
+}
+
+.trapList:nth-child(even){
+  background-color: var(--g11);
+}
+
+.trapList:nth-child(odd){
+  background-color: var(--g9);
+}
+
+div.scroll {
+  background-color: rgba(30,30,30,.7);
+  width: 50vw;
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  left: 50%;
+  position: absolute;
+  scrollbar-width: none;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

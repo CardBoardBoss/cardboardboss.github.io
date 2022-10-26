@@ -6,14 +6,16 @@
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('form').onsubmit = function(){
-          fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?name=Dark%20Magician')
+          fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?')
           .then(response => response.json())
           .then(data => {
             const name = document.querySelector('#card').value.toUpperCase();
             const alien = data.data[0].name;
+            const alienls = data.data;
             const checkName = alien.toUpperCase();
             console.log(alien);
             console.log(name);
+            console.log(alienls);
             if (checkName == name){
               document.querySelector('#result').innerHTML = `Correct he is the ${alien}!`;
             } else{
@@ -22,7 +24,6 @@
           });
           return false;
         };
-
       });
     </script>
   </head>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet"
+       type="text/css" href="tttstyle.css">
+    <script src='tictactoe.js'></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="main">
+      <h1>TIC TAC TOE</h1>
+
+    <!-- Game Instructions -->
+      <p id="ins">Game starts by just Tap on
+          box<br><br>First Player starts as
+          <b>Player X</b><br>And<br>Second
+          Player as <b>Player 0</b>
+      </p>
+      <br><br>
+       <!-- 3*3 grid of Boxes -->
+       <input type="text" id="b1" onclick=
+           "myfunc_3(); myfunc();" readonly>
+
+       <input type="text" id="b2" onclick=
+           "myfunc_4(); myfunc();" readonly>
+
+       <input type="text" id="b3" onclick=
+           "myfunc_5(); myfunc();" readonly>
+       <br><br>
+
+       <input type="text" id="b4" onclick=
+           "myfunc_6(); myfunc();" readonly>
+
+       <input type="text" id="b5" onclick=
+           "myfunc_7(); myfunc();" readonly>
+
+       <input type="text" id="b6" onclick=
+           "myfunc_8(); myfunc();" readonly>
+       <br><br>
+
+       <input type="text" id="b7" onclick=
+           "myfunc_9(); myfunc();" readonly>
+
+       <input type="text" id="b8" onclick=
+           "myfunc_10();myfunc();" readonly>
+
+       <input type="text" id="b9" onclick=
+           "myfunc_11();myfunc();" readonly>
+    </div>
+<input type="checkbox" is="btnControl" id="btnControl">
+<label class="btnControl" for="btnControl">  <span class="material-symbols-outlined" id="heart">
+    favorite
+  </span></label>
+
+
+  <input id="toggle-heart" type="checkbox"/>
+  <label for="toggle-heart">❤</label>
+    </div>
+  </body>
+</html>

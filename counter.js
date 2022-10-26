@@ -14,7 +14,7 @@ function count() {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelector('h1').innerHTML = localStorage.getItem('counter');
+  document.querySelector('h1').innerHTML = localStorage.getItem('counter')
   document.querySelector('button').onclick = count;
 });
 
