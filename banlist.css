@@ -72,6 +72,10 @@ th {
   color: white;
 }
 
+tr {
+  font-size: 24px;
+}
+
 .effectList:nth-child(even){
   background-color: var(--g6);
 
