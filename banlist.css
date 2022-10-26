@@ -136,7 +136,7 @@ tr {
 
 div.scroll {
   background-color: rgba(30,30,30,.7);
-  width: 90vw;
+  width: 85vw;
   height: 85vh;
   overflow-x: hidden;
   overflow-y: auto;
