@@ -135,8 +135,8 @@ tr {
 
 div.scroll {
   background-color: rgba(30,30,30,.7);
-  width: 90vw;
-  height: 85vh;
+  width: 50vw;
+  height: 90vh;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
@@ -146,17 +146,6 @@ div.scroll {
   left: 50%;
   position: absolute;
   scrollbar-width: none;
-  top: 53%;
+  top: 50%;
   transform: translate(-50%, -50%);
-}
-
-#dropDown {
-  height: 4.5rem;
-  border-radius: 5px;
-  background-color: rgb(30, 30, 30);
-  border-top: 1px solid var(--g3);
-  border-left: 2px solid var(--g3);
-  border-bottom: 5px solid var(--g4);
-  border-right: 10px solid var(--g4);
-  box-shadow: 0px 0px 50px rgba(0, 0, 255, 0.5), 0px 0px 20px rgba(0, 0, 255, 0.5) inset;
 }
