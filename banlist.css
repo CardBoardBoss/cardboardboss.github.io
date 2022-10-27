@@ -65,11 +65,16 @@ body {
 table{
   margin-left: auto;
   margin-right: auto;
+  width: 90%
 }
 
 th {
   background-color: var(--g4);
   color: white;
+}
+
+tr {
+  font-size: 24px;
 }
 
 .effectList:nth-child(even){
@@ -129,19 +134,153 @@ th {
   background-color: var(--g9);
 }
 
-div.scroll {
-  background-color: rgba(30,30,30,.7);
-  width: 300px;
-  height: 90vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
-  padding: 20px;
-  left: 50%;
-  position: absolute;
-  scrollbar-width: none;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+
+@media all and (max-width: 1400px){
+  div.scroll {
+    background-color: rgba(30,30,30,.7);
+    width: 400px;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: center;
+    align-content: center;
+    left: 50%;
+    position: absolute;
+    scrollbar-width: none;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    }
+
+    #dropDown {
+      height: 4.5rem;
+      border-radius: 5px;
+      background-color: rgb(30, 30, 30);
+      border-top: 1px solid var(--g3);
+      border-left: 2px solid var(--g3);
+      border-bottom: 5px solid var(--g4);
+      border-right: 10px solid var(--g4);
+      box-shadow: 0px 0px 50px rgba(0, 0, 255, 0.5), 0px 0px 20px rgba(0, 0, 255, 0.5) inset;
+      }
+    .responsiveIMG {
+      width: 100%;
+      max-width: 50px;
+      height: auto;
+      }
+
+    #discord {
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+
+    .banButton{
+      transform: translate(-50%, -50%);
+      position: absolute;
+      color: white;
+      top: 15%;
+    }
+
+    #card1{
+      left: 17%;
+    }
+
+    #card2 {
+      left: 34%;
+    }
+
+    #card3{
+      left:51%;
+    }
+
+    .card {
+      width: 25px;
+      height: 45px;
+      border-radius: 2px;
+      border: 2px solid rgb(190, 153, 10);
+      background: rgb(150, 67, 21);
+
+    }
+    .cardContainer {
+      position: absolute;
+      top: 15%;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+    }
+
+    .cardCenter {
+      background: black;
+      border-radius: 50%;
+      width: 13px;
+      height: 26px;
+      left: 30%;
+      position: absolute;
+      backface-visibility: hidden;
+      top: 27%;
+    }
+
+    .crown {
+    top: 35%;
+    left: 20%;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 12px;
+    border: 2px solid;
+    border-top-color: transparent;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-top: 4px
+  }
+  .crown::after,
+  .crown::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-45deg);
+    top: -4px
+}
+.crown::before {
+    border-top-left-radius: 2px;
+    left: -1px
+}
+.crown::after {
+    border-bottom-right-radius: 2px;
+    right: -1px
+    }
+
+    .num{
+      padding-left: 5px;
+      padding-top: 10px;
+      font-size: 24px;
+    }
+
+@media all and (min-width: 1400px){
+  div.scroll {
+    background-color: rgba(30,30,30,.7);
+    width: 1000px;
+    height: 85vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    justify-content: center;
+    align-content: center;
+    left: 50%;
+    position: absolute;
+    scrollbar-width: none;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    }
+
+  #partialHeader {
+      display: none;
+      }
+}
+
+.cardShadow{
+  box-shadow: 0px 0px 50px rgba(250, 20, 10, 1), 0px 0px 20px rgba(250, 20, 10, 1) inset;
 }

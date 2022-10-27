@@ -2,7 +2,7 @@ var banList = {"effectMonsters":
   [
   {
   "name": "ARCHNEMESES PROTOS ",
-  "note": ""
+  "note": "",
   },
   {
   "name": "BLACKWING – GOFU THE VAGUE SHADOW",
@@ -10,7 +10,7 @@ var banList = {"effectMonsters":
   },
   {
   "name": "BLOCK DRAGON",
-  "note": ""
+    "note": ""
 
   },
 {
@@ -407,8 +407,17 @@ var banList = {"effectMonsters":
 
 };
 
+let normalBanList;
+const listHeader = document.querySelector('.banList').innerHTML;
+
 const baninfo = () => {
   const list = document.querySelector('.banList');
+  if(normalBanList != undefined){
+    list.innerHTML = listHeader;
+    list.innerHTML += normalBanList;
+    return
+  }
+
   let newList = [];
   for(let i = 0; i < banList.effectMonsters.length; i++){
     let currentCard = banList.effectMonsters[i];
@@ -439,6 +448,163 @@ const baninfo = () => {
     newList += `<tr class = \"trapList\"><td>Trap</td><td>${currentCard.name}</td> <td>${currentCard.note}</td></tr>`;
   }
   list.innerHTML += newList;
+  normalBanList = newList;
+}
+
+var spiritBanList = {"effectMonsters":
+  [
+{
+"name": "CHAOS EMPEROR DRAGON - ENVOY OF THE END",
+"note": ""
+},
+{
+"name": "THE WINGED DRAGON OF RA - SPHERE MODE",
+"note": ""
+}
+],
+  "fusionMonsters":
+  [
+    {
+      "name": "DESTINY HERO - DESTROYER PHOENIX ENFORCER",
+      "note":""
+    },
+    {
+      "name": "RED-EYES DARK DRAGOON",
+      "note": ""
+    }
+  ],
+  "linkMonsters":
+  [
+    {
+      "name": "GUARDRAGON AGARPAIN",
+      "note":""
+    },
+    {
+      "name": "GUARDRAGON ELPY",
+      "note": ""
+    },
+    {
+      "name": "HEAVYMETALFOES ELECTRUMITE",
+      "note": ""
+    },
+    {
+      "name": "KNIGHTMARE GOBLIN",
+      "note":""
+    },
+    {
+      "name": "KNIGHTMARE MERMAID",
+      "note": ""
+    },
+    {
+      "name": "LINKROSS",
+      "note": ""
+    },
+    {
+      "name": "MECHA PHANTOM BEAST AURORADON",
+      "note":""
+    },
+    {
+      "name": "PRANK-KIDS MEOW-MEOW-MU",
+      "note": ""
+    },
+    {
+      "name": "PREDAPLANT VERTE ANACONDA",
+      "note": ""
+    },
+    {
+      "name": "SIMORGH, BIRD OF SOVEREIGNT",
+      "note": ""
+    },
+    {
+      "name": "SUMMON SORCERESS",
+      "note":""
+    },
+    {
+      "name": "TOPOLOGIC GUMBLAR DRAGON",
+      "note": ""
+    },
+    {
+      "name": "UNION CARRIER",
+      "note": ""
+    }
+  ]
+};
+
+const spiritbaninfo = () => {
+  const list = document.querySelector('.banList');
+
+  let newList = [];
+  for(let i = 0; i < spiritBanList.effectMonsters.length; i++){
+    let currentCard = spiritBanList.effectMonsters[i];
+    newList += `<tr class = \"effectList\"><td>Effect Monster</td><td>${currentCard.name}</td><td>${currentCard.note}</td></tr>`;
+  }
+  for(let i = 0; i < spiritBanList.fusionMonsters.length; i++){
+    let currentCard = spiritBanList.fusionMonsters[i];
+    newList += `<tr class = \"fusionList\"><td>Fusion Monster</td><td>${currentCard.name}</td><td>${currentCard.note}</td></tr>`;
+  }
+  list.innerHTML = listHeader;
+  document.querySelector(".tableTitle").innerText = "Banned as Duel Spirit"
+  list.innerHTML += newList;
+}
+
+var semiList = {"effectMonsters":
+  [
+  {
+  "name": "DESTINY HERO - MALICIOUS",
+  "note": "",
+  },
+  {
+  "name": "INFERNITY BEETLE",
+  "note": ""
+  },
+  {
+  "name": "NIMBLE MOMONGA",
+    "note": ""
+
+  },
+{
+  "name": "REBORN TENGU",
+  "note": ""
+}
+]
+};
+
+const semiInfo = () => {
+  const list = document.querySelector('.banList');
+
+  let newList = [];
+  for(let i = 0; i < semiList.effectMonsters.length; i++){
+    let currentCard = semiList.effectMonsters[i];
+    newList += `<tr class = \"effectList\"><td>Effect Monster</td><td>${currentCard.name}</td><td>${currentCard.note}</td></tr>`;
+  }
+  list.innerHTML = listHeader;
+  document.querySelector(".tableTitle").innerText = "Two Copies Allowed"
+  list.innerHTML += newList;
 }
 
 baninfo();
+
+const borderToggle = () => {
+  document.querySelectorAll('.cardContainer').forEach((item) => {
+    item.classList.remove("cardShadow");
+  });
+  if(event){
+    const id =  event.currentTarget.id;
+    const card = document.querySelector('#' + id);
+    card.classList.add("cardShadow");
+  }
+  else{
+    const card = document.querySelector('#card1');
+    card.classList.add("cardShadow");
+  }
+}
+
+borderToggle();
+
+document.querySelector('#card1').onclick = baninfo;
+document.querySelector('#card2').onclick = spiritbaninfo;
+document.querySelector('#card3').onclick = semiInfo;
+
+document.querySelectorAll('.cardContainer').forEach((item) => {
+  item.addEventListener('click', borderToggle);
+});
