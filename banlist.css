@@ -201,7 +201,7 @@ tr {
     }
     .cardContainer {
       position: absolute;
-      top: 15%;
+      top: 150px;
       cursor: pointer;
       transform: translate(-50%, -50%);
     }
