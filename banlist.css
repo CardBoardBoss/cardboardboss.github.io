@@ -140,15 +140,14 @@ tr {
   div.scroll {
     background-color: rgba(30,30,30,.7);
     width: 400px;
-    height: 900px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    height: 70vh;
+    overflow: auto;
     justify-content: center;
     align-content: center;
     left: 50%;
     position: absolute;
     scrollbar-width: none;
-    top: 625px;
+    top: 475px;
     transform: translate(-50%, -50%);
     }
 
@@ -202,7 +201,7 @@ tr {
     }
     .cardContainer {
       position: absolute;
-      top: 125px;
+      top: 15%;
       cursor: pointer;
       transform: translate(-50%, -50%);
     }
