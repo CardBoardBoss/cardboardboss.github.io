@@ -269,7 +269,7 @@ tr {
         position: fixed;
         left: 0%;
         scrollbar-width: none;
-        top: 20%;
+        top: 25%;
         }
 
         #dropDown {
@@ -382,7 +382,7 @@ tr {
 }
 @media all and (max-width: 400px){
   div.scroll {
-      left: -2%;
+      left: -4%;
       }
       }
 @media all and (min-width: 1400px){
