@@ -144,11 +144,10 @@ tr {
     overflow: auto;
     justify-content: center;
     align-content: center;
-    left: 50%;
-    position: absolute;
+    position: fixed;
+    left: 0%;
     scrollbar-width: none;
-    top: 57%;
-    transform: translate(-50%, -50%);
+    top: 20%;
     }
 
     #dropDown {
