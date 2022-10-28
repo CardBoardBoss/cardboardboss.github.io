@@ -34,6 +34,7 @@ body {
  );
   background-size: 200%;
   height: 100vh;
+  overflow: hidden;
   margin: 0px;
 }
 
@@ -567,6 +568,10 @@ div.scroll {
 }
 
 @media all and (max-width: 500px){
+  body{
+    overflow: auto;
+  }
+
   div.scroll {
     width: 400px;
     left: -2%;
