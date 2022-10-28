@@ -382,12 +382,12 @@ tr {
 }
 @media all and (max-width: 400px){
   div.scroll {
-      top: 25%;
+      top: 23%;
       left: -4%;
       }
       .cardContainer {
         position: fixed;
-        top: 20%;
+        top: 18%;
         cursor: pointer;
         transform: translate(-50%, -50%);
       }
