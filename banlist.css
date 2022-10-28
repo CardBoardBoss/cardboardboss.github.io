@@ -258,7 +258,7 @@ tr {
       font-size: 24px;
     }
 
-  @media all and (max-height: 600px){
+  @media all and (max-height: 800px){
     div.scroll {
         background-color: rgba(30,30,30,.7);
         width: 400px;
@@ -269,7 +269,7 @@ tr {
         position: fixed;
         left: 0%;
         scrollbar-width: none;
-        top: 30%;
+        top: 25%;
         }
 
         #dropDown {
@@ -322,7 +322,7 @@ tr {
         }
         .cardContainer {
           position: fixed;
-          top: 25%;
+          top: 20%;
           cursor: pointer;
           transform: translate(-50%, -50%);
         }
