@@ -639,10 +639,16 @@ div.scroll {
     }
 
   .num{
-    padding-left: 5px;
+    padding-left: 7px;
     padding-top: 10px;
     font-size: 24px;
     }
+}
+
+@media all and (max-height: 700px){
+  .cardContainer {
+    top: 20%
+  }
 }
 
 .cardShadow{
