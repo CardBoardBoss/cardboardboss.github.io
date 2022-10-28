@@ -567,7 +567,7 @@ div.scroll {
     }
 }
 
-@media all and (max-width: 400px){
+@media all and (max-width: 500px){
   div.scroll {
     width: 400px;
     left: -2%;
