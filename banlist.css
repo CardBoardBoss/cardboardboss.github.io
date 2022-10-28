@@ -382,9 +382,16 @@ tr {
 }
 @media all and (max-width: 400px){
   div.scroll {
+      top: 25%;
       left: -4%;
       }
+      .cardContainer {
+        position: fixed;
+        top: 15%;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
       }
+    }
 @media all and (min-width: 1400px){
   div.scroll {
     background-color: rgba(30,30,30,.7);
